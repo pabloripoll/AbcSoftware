@@ -7,7 +7,7 @@ C_RED='\033[0;31m'
 C_YEL='\033[0;33m'
 C_END='\033[0m'
 
-REPO_SSH="git@github.com:pabloripoll/TechManElectron.git"
+REPO_SSH="git@github.com:pabloripoll/AbcSoftware.git"
 
 help: ## Show this help message
 	echo 'usage: make [target]'
