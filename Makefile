@@ -28,8 +28,7 @@ repo-test:  ## Test remote git repository conecction.
 # Specific branch $ make repo-update branch=??? comment="???" or by default master branch $ make repo-update
 branch ?= master
 comment ?= maint/$(shell date +"%Y%m%d%H%M%S")
-foo = ok
-repo-update: ## Commits the HEAD of remote (specified or default master) branch git repository adding. For e.g. $ make repo-update branch=??? comment="???"
+repo-update: ## Commits the HEAD of remote git repository branch.
 	@echo ${C_YEL}"ATTENTION:"${C_END}
 	@echo "All local changes from branch:"
 	git branch;
@@ -48,7 +47,3 @@ repo-update: ## Commits the HEAD of remote (specified or default master) branch 
 		git push origin -u master; \
         echo ${C_GRN}"O.K.! process has been finished."${C_END}; \
     fi
-
-error-examples: ## ftp.gnu.org/old-gnu/Manuals/make-3.79.1/html_chapter/make_6.html
-	@[ "${comment}" ] || ( echo ">> commit comment is not set"; exit 1 )
-	$(error comment variable is not set)
